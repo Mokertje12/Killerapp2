@@ -1,0 +1,9 @@
+C:\Users\Sander\source\repos\Killerapp2\Killerapp2.Factory\bin\Debug\netcoreapp2.0\Killerapp2.Domain.deps.json
+C:\Users\Sander\source\repos\Killerapp2\Killerapp2.Factory\bin\Debug\netcoreapp2.0\Killerapp2.Domain.dll
+C:\Users\Sander\source\repos\Killerapp2\Killerapp2.Factory\bin\Debug\netcoreapp2.0\Killerapp2.Domain.pdb
+C:\Users\Sander\source\repos\Killerapp2\Killerapp2.Factory\obj\Debug\netcoreapp2.0\Killerapp2.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Sander\source\repos\Killerapp2\Killerapp2.Factory\obj\Debug\netcoreapp2.0\Killerapp2.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Sander\source\repos\Killerapp2\Killerapp2.Factory\obj\Debug\netcoreapp2.0\Killerapp2.Domain.AssemblyInfoInputs.cache
+C:\Users\Sander\source\repos\Killerapp2\Killerapp2.Factory\obj\Debug\netcoreapp2.0\Killerapp2.Domain.AssemblyInfo.cs
+C:\Users\Sander\source\repos\Killerapp2\Killerapp2.Factory\obj\Debug\netcoreapp2.0\Killerapp2.Domain.dll
+C:\Users\Sander\source\repos\Killerapp2\Killerapp2.Factory\obj\Debug\netcoreapp2.0\Killerapp2.Domain.pdb

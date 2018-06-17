@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Http
+@using Killerapp2.Domain;
+@model Killerapp2.Models.ViewModels.MonDetailViewModel
+@{
+    ViewData["Title"] = "Detail";
+}
+<h2>Detail</h2>
+<br />
+<div class="col-sm-5">
+    <div class="adverContainer">
+        <h2>Monster</h2>
+        <div class="info">
+            <h4><b>Naam: </b>@Model.Monstertype.Naam</h4>
+            <img src="@Model.Monstertype.Path" style="max-height:250px;min-height:250px;" />
+            <p><b>Laagste level vindbaar:</b> @Model.Monstertype.LevelRangeLaagste</p>
+            <p><b>Hoogste level vindbaar:</b> @Model.Monstertype.LevelRangeHoogste</p>
+            <p><b>Vangkans:</b> @Model.Monstertype.Vangkans %</p>
+            <p><b>Element:</b> @Model.Monstertype.ElementNaam</p>
+        </div>
+    </div>
+</div>

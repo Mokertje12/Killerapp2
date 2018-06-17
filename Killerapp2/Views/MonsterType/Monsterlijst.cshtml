@@ -1,0 +1,33 @@
+﻿@using Killerapp2.Domain
+@model Killerapp2.Models.ViewModels.GetMonsterTypeViewModel
+@{
+    ViewData["Title"] = "Monsterlijst";
+}
+<h2>Monsterlijst</h2>
+<br/>
+<table style="width:50%;">
+    @if (Model.Monstertype.Count != 0)
+    {
+        <tr>
+            <th>Dex nr</th>
+            <th>Sprite</th>
+            <th>Pokemon</th>
+            <th>Element</th>
+        </tr>
+        foreach (MonsterType mon in Model.Monstertype)
+        {
+            <tr>
+                <td>@mon.ID</td>
+                <td style="text-align:center"><img src="@mon.Path" alt="@mon.SpriteID" height="42" width="42"></td>
+                <td> <a asp-controller="MonsterType" asp-action="Detail" asp-route-id="@mon.ID" class="AdName hvr-underline-from-center">@mon.Naam</a></td>
+                <td style="text-align:center;background-color:@mon.ElementKleur"> <b>@mon.ElementNaam</b></td>
+            </tr>
+        }
+    }
+    else
+    {
+        <p>Geen monsters gevonden :(</p>
+    }
+</table>
+
+<a class="a-iconhover" asp-controller="MonsterType" asp-action="MonsterForm">Nieuw Monster <span>+</span></a>

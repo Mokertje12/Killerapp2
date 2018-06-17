@@ -1,0 +1,37 @@
+﻿@using Killerapp2.Domain
+@model Killerapp2.Models.ViewModels.GetProductViewModel
+@{
+    ViewData["Title"] = "Winkelpagina";
+}
+<head>
+    <title>Home</title>
+    <link href="@Url.Content("~/css/indexstyle.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<h2>Winkelpagina</h2>
+<br />
+<div class="adver">
+    <div class="container-fluid">
+        <div class="row">
+                    @if (Model.Product.Count != 0)
+                         {
+                foreach (Product pro in Model.Product)
+                {
+                    <div class="col-sm-4 row-eq-height">
+                        <div class="advertisement-container">
+                            <div class="ad-image" style="background-size: contain;"><img class="ad-image" style="max-height: 250px;min-height:250px;margin-top: 3.5%;margin-left: 0.6%;" src="@pro.Path"></div>
+                            <p>@pro.Naam</p>
+                            <h5 class="AdDescription">@pro.Omschrijving</h5>
+                            <p>@pro.Price<img style="max-height:20px;float: left;" src="~/images/coins.png" /></p>
+                            <a asp-controller="Shop" asp-action="Detail" asp-route-id="@pro.ID" class="AdName hvr-underline-from-center">Afrekenen</a>
+                        </div>
+                    </div>
+                    }
+                    }
+                    else
+                    {
+                            <p>Deze website heeft nog geen producten :</p>
+                    }
+        </div>
+    </div>
+</div>

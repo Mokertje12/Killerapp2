@@ -1,0 +1,63 @@
+﻿@using Killerapp2.Domain
+@model Killerapp2.Models.ViewModels.AccountDashboardViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<head>
+    <link href="@Url.Content("~/css/dashboardstyle.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="dasboard-container">
+                    <h2>ACCOUNT</h2>
+                    <div class="dashboardcontent-container">
+                        <div class="glyphicon glyphicon-user account-image">
+                            <div class="usericon-background"></div>
+                        </div>
+                        <p><b>@Model.Account.Gebruikersnaam</b></p>
+                        <p><b style="float:left">@Model.Account.Balance</b> <img style="max-height:20px;float: left;" src="~/images/coins.png" /></p>
+                        <br/><br/>
+                    </div>
+                    <div class="link-container">
+                        <a asp-controller="Account" asp-action="LogOut" style="padding-right: 17%">UITLOGGEN</a>
+                        <a asp-controller="Account" asp-action="Account">MIJN ACCOUNT ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="dasboard-container">
+                    <h2>MIJN GEKOCHTE ITEMS</h2>
+                    <div class="dashboardcontent-container">
+                        @*@foreach (Advertisement ad in Model.RecAdvertisements)
+                            {
+                                <div class="row dashboard-row">
+                                    <p><b>@ad.City</b>: @ad._Name</p>
+                                    <a asp-controller="Ad" asp-action="Detail" asp-route-id="@ad.AdvertisementID">></a>
+                                </div>
+                            }
+                        *@
+                    </div>
+                    <div class="link-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="dasboard-container">
+                    <h2>MIJN MONSTERS</h2>
+                    <div class="dashboardcontent-container">
+
+                        <div class="row dashboard-row">
+                        </div>
+                    </div>
+                    <div class="link-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

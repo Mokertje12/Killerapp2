@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "RegistrationSystem";
+}
+
+<h2>Account Registratie</h2>
+<form asp-action="Registrate" method="post" class="form-horizontal">
+    <fieldset>
+        <legend>Nieuw Account</legend>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="karakterModel">KarakterModel: </label>
+            <div class="col-sm-10 input-breed">
+                <input class="form-control" type="text" id="karakterModel" name="karakterModel" value="" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="gebruikersnaam">Gebruikersnaam: </label>
+            <div class="col-sm-10 input-breed">
+                <input class="form-control" type="text" id="gebruikersnaam" name="gebruikersnaam" value="" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email: </label>
+            <div class="col-sm-10 input-breed">
+                <input class="form-control" type="text" id="email" name="email" value="" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="wachtwoord">Wachtwoord: </label>
+            <div class="col-sm-10 input-breed">
+                <input class="form-control" type="text" id="wachtwoord" name="wachtwoord" value="" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">&nbsp;</label>
+            <div class="col-sm-10">
+                <input type="submit" value="Verstuur" class="submit" />
+            </div>
+        </div>
+    </fieldset>
+</form>

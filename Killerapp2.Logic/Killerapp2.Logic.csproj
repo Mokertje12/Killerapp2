@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Killerapp2.DAL\Killerapp2.DAL.csproj" />
+    <ProjectReference Include="..\Killerapp2.Domain\Killerapp2.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

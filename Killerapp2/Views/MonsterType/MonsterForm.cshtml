@@ -1,0 +1,64 @@
+﻿@using Killerapp2.Domain
+@model Killerapp2.Models.ViewModels.GetMonsterTypeViewModel
+@{
+    ViewData["Title"] = "MonsterForm";
+
+}
+
+<h2>Voeg een nieuw monster toe</h2>
+
+<form asp-action="Post" enctype="multipart/form-data" method="post" class="form-horizontal">
+    <fieldset>
+        <legend></legend>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="nameMonster">Naam Monster: </label>
+            <div class="col-sm-10 input-breed">
+                <input class="form-control" type="text" id="nameMonster" name="nameMonster" value="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="photoMonster">Voeg een sprite toe</label>
+            <div class="col-sm-10 input-smal">
+                <input type="file" id="photoMonster" name="photoMonster" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="lowlevelMonster">Level Range laagste: </label>
+            <div class="col-sm-10 input-smal">
+                <input class="form-control" type="text" id="lowlevelMonster" name="lowlevelMonster" value="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="highlevelMonster">level Range hoogste: </label>
+            <div class="col-sm-10 input-smal">
+                <input class="form-control" type="text" id="highlevelMonster" name="highlevelMonster" value="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="vangkansMonster">Vangkans:</label>
+            <div class="col-sm-10 input-smal">
+                <input class="form-control" type="text" id="vangkansMonster" name="vangkansMonster" value="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="elementMonster">Element:</label>
+            <div class="col-sm-10 input-breed">
+                @*<input class="form-control" type="text" id="elementMonster" name="elementMonster" value="" />*@
+                <select id="elementMonster" name="elementMonster">
+                    @foreach (Element ele in Model.Element)
+                    {
+                    <option value="@ele.ID">@ele.ElementNaam</option>
+                    }
+                    
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3">&nbsp;</label>
+            <div class="col-sm-10">
+                <input type="submit" value="Voeg toe" class="btn btn-default" />
+                <a asp-area="" asp-controller="MonsterType" asp-action="Monsterlijst" class="btn btn-default">ANNULEER</a>
+            </div>
+        </div>
+    </fieldset>
+</form>

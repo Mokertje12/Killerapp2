@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Http
+@using Killerapp2.Domain;
+@model Killerapp2.Models.ViewModels.ProDetailViewModel
+@{
+    ViewData["Title"] = "Detail";
+}
+<h2>Detail</h2>
+<br/>
+<div class="col-sm-5">
+    <div class="adverContainer">
+        <h2>Monster</h2>
+        <div class="info">
+            <h4><b>Naam: </b>@Model.Product.Naam</h4>
+            <img src="@Model.Product.Path" style="max-height:250px;min-height:250px;" />
+            <p><b>Omschrijving:</b> @Model.Product.Omschrijving</p>
+            <p><b>Prijs:</b> @Model.Product.Price <img style="max-height:20px;float: left;" src="~/images/coins.png" /><a asp-controller="Shop" asp-action="Afrekenen" asp-route-id="@Model.Product.ID" style="float: right;" class="AdName hvr-underline-from-center">Kopen</a></p>          
+        </div>
+    </div>
+</div>
+<br/>
